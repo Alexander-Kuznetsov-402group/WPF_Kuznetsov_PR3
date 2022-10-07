@@ -7,21 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <Style TargetType="Button">
-            <Style.Setters>
-                <Setter Property="Background" Value="DarkBlue" />
-                <Setter Property="Foreground" Value="White" />
-                <Setter Property="FontFamily" Value="Verdana" />
-                <Setter Property="Padding" Value="5" />
-                <Setter Property="Margin" Value="5" />
-            </Style.Setters>
+        <Style TargetType="Button" x:Key="DocButton">
+            <Setter Property="Background" Value="DarkBlue" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="Padding" Value="5" />
+            <Setter Property="Margin" Value="5" />
         </Style>
     </Window.Resources>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
-        <Button>Открыть</Button>
-        <Button>Обработать</Button>
-        <Button>Сохранить</Button>
+        <Button Style="{StaticResource ResourceKey=DocButton}">Открыть</Button>
+        <Button Style="{StaticResource ResourceKey=DocButton}">Обработать</Button>
+        <Button Style="{StaticResource ResourceKey=DocButton}">Сохранить</Button>
         <Button Padding="5" Margin="5">Закрыть</Button>
     </StackPanel>
-    
 </Window>
